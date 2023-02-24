@@ -11,13 +11,11 @@ window.onload = function() {
   let adj = ["great", "big", "little", "small"];
   let noun = ["jogger", "racoon", "bear", "dog"];
 
-  const rand = arr => {
-    let index = Math.floor(Math.random() * arr.length);
-    return arr[index];
-  };
-  let pron = rand(pronoun);
-  let ad = rand(adj);
-  let nou = rand(noun);
-
-  console.log(pron + ad + nou + ".com");
+  for (let pron of pronoun) {
+    for (let ad of adj) {
+      for (let no of noun) {
+        console.log(pron + ad + no + ".com");
+      }
+    }
+  }
 };
